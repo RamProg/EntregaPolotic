@@ -1,11 +1,11 @@
 from django.db import models
 from uuid import uuid4
-from abc import ABCMeta, abstractmethod
+from abc import ABC,ABCMeta, abstractmethod
 # Create your models here.
 
 
-class Usuario(metaclass=ABCMeta):
-    user_id = models.models.UUIDField(
+class Usuario(models.Model):
+    user_id = models.UUIDField(
         primary_key=True, default=uuid4, editable=False)
     name = models.CharField(max_length=30)
     username = models.CharField(max_length=15)
