@@ -1,0 +1,12 @@
+{% extends 'index.html' %}
+
+{% block title %} Create a patient{% endblock title %}
+{%block body%} 
+
+<form method='post'>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Create or edit</button>
+</form>
+
+{%endblock body%}
